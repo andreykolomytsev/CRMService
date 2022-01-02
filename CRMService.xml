@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CRMService</name>
+    </assembly>
+    <members>
+        <member name="M:CRMService.Controllers.ContractorController.GetAll(CRMService.Helpers.PaginationFilter)">
+            <summary>
+            Получить список всех контрагентов
+            </summary>
+            <param name="filter">Параметры запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.ContractorController.GetById(System.Int32)">
+            <summary>
+            Получить контрагента по ID
+            </summary>
+            <param name="id">ID контрагента</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.ContractorController.Create(CRMService.DTOModels.Request.RequestContractor)">
+            <summary>
+            Создать нового контрагента
+            </summary>
+            <param name="model">Параметры контрагента</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.ContractorController.Update(System.Int32,CRMService.DTOModels.Request.RequestContractor)">
+            <summary>
+            Обновить данные контрагента
+            </summary>
+            <param name="id">ID контрагента</param>
+            <param name="model">Параметры контрагента</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.ContractorController.Delete(System.Int32)">
+            <summary>
+            Удалить контрагента
+            </summary>
+            <param name="id">ID контрагента</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.GroupController.GetAll(CRMService.Helpers.PaginationFilter)">
+            <summary>
+            Получить список всех групп контрагентов
+            </summary>
+            <param name="filter">Параметры запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.GroupController.GetById(System.Int32)">
+            <summary>
+            Получить группу контрагента по ID
+            </summary>
+            <param name="id">ID группы контрагента</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.GroupController.Create(CRMService.DTOModels.Request.RequestGroup)">
+            <summary>
+            Создать новую группу контрагента
+            </summary>
+            <param name="model">Параметры группы контрагента</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.GroupController.Update(System.Int32,CRMService.DTOModels.Request.RequestGroup)">
+            <summary>
+            Обновить данные группы контрагента
+            </summary>
+            <param name="id">ID группы</param>
+            <param name="model">Параметры группы</param>
+            <returns></returns>
+        </member>
+        <member name="M:CRMService.Controllers.GroupController.Delete(System.Int32)">
+            <summary>
+            Удалить группу контрагента
+            </summary>
+            <param name="id">ID группы</param>
+            <returns></returns>
+        </member>
+        <member name="T:CRMService.DTOModels.Account">
+            <summary>
+            Текущий авторизованный пользователь
+            </summary>
+        </member>
+        <member name="P:CRMService.DTOModels.Account.TenantId">
+            PERMISSIONS
+        </member>
+        <member name="T:CRMService.Entities.ContactModel">
+            <summary>
+            Контактные лица
+            </summary>
+        </member>
+        <member name="T:CRMService.Entities.ContractorModel">
+            <summary>
+            Список контрагентов
+            </summary>
+        </member>
+        <member name="P:CRMService.Entities.ContractorModel.Contacts">
+            <summary>
+            Внешний ключи на таблицу с контактами
+            </summary>
+        </member>
+        <member name="P:CRMService.Entities.ContractorModel.Payments">
+            <summary>
+            Внешний ключ на таблицу с методами оплаты
+            </summary>
+        </member>
+        <member name="T:CRMService.Entities.ContractorType.Type">
+            <summary>
+            Типы контрагентов
+            </summary>
+        </member>
+        <member name="M:CRMService.Entities.ContractorType.CheckType(System.Object)">
+            <summary>
+            Проверка на то, существует ли передаваемый тип в перечислении
+            </summary>
+            <param name="value">Проверяемое значение</param>
+            <returns></returns>
+        </member>
+        <member name="T:CRMService.Entities.GroupModel">
+            <summary>
+            Группы контрагентов
+            </summary>
+        </member>
+        <member name="T:CRMService.Entities.PaymentModel">
+            <summary>
+            Методы оплаты
+            </summary>
+        </member>
+        <member name="M:CRMService.Helpers.DataContext.SetTenantsIds">
+            <summary>
+            Добавляем Id организации при добавлвении ко всем записям
+            </summary>
+        </member>
+        <member name="P:CRMService.Helpers.PaginationFilter.PageNumber">
+            <summary>
+            Номер страницы
+            </summary>
+        </member>
+        <member name="P:CRMService.Helpers.PaginationFilter.PageSize">
+            <summary>
+            Кол-во элементов на странице
+            </summary>
+        </member>
+        <member name="T:CRMService.Wrappers.PagedResponse`1">
+            <summary>
+            Обертка ответа контроллера для разбивки на страницы
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.PageNumber">
+            <summary>
+            Текущая страница
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.PageSize">
+            <summary>
+            Элементов на странице
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.FirstPage">
+            <summary>
+            Ссылка на первую страницу
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.LastPage">
+            <summary>
+            Ссылка на последнюю страницу
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.TotalPages">
+            <summary>
+            Всего страниц
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.TotalRecords">
+            <summary>
+            Всего записей
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.NextPage">
+            <summary>
+            Ссылка на следующую страницу
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.PagedResponse`1.PreviousPage">
+            <summary>
+            Ссылка на предыдущую страницу
+            </summary>
+        </member>
+        <member name="T:CRMService.Wrappers.Response`1">
+            <summary>
+            Обертка ответа контроллера
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:CRMService.Wrappers.Response`1.Succeeded">
+            <summary>
+            Успешное выполнение запроса
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.Response`1.Message">
+            <summary>
+            Сообщение
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.Response`1.Errors">
+            <summary>
+            Список ошибок
+            </summary>
+        </member>
+        <member name="P:CRMService.Wrappers.Response`1.Result">
+            <summary>
+            Сам ответ
+            </summary>
+        </member>
+    </members>
+</doc>
